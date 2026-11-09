@@ -2,6 +2,8 @@
 
 Laravel 13 integration for the K&H eAPI v1.0 payment gateway. The package signs requests with RSA/SHA-256, verifies every signed gateway response, and supports hosted card payments, OneClick, Apple Pay and Google Pay through one client stack.
 
+**Release status:** `1.0.0-rc.1` is intended for Laravel integration and sandbox evaluation. See the [release notes](docs/releases/1.0.0-rc.1.md) for verified scenarios and the remaining K&H acceptance work.
+
 ## Requirements
 
 - PHP 8.4.27 or later in the PHP 8 series
@@ -10,8 +12,10 @@ Laravel 13 integration for the K&H eAPI v1.0 payment gateway. The package signs 
 
 ## Installation
 
+After the release is indexed on Packagist, install this release candidate explicitly:
+
 ```bash
-composer require trianity/laravel-vpos
+composer require 'trianity/laravel-vpos:1.0.0-rc.1'
 php artisan vendor:publish --provider="Trianity\Vpos\Providers\PackageServiceProvider" --tag=vpos-config
 ```
 
@@ -31,7 +35,7 @@ KH_TEST_PRIVATE_KEY=key/merchant-private.pem
 KH_TEST_PUBLIC_KEY=key/kh-sandbox-public.pem
 ```
 
-Production uses the same VPOS ID and trusted return URL with production keys:
+Production requires the production VPOS ID, production keys, and a trusted HTTPS return URL:
 
 ```dotenv
 KH_ENV=live
@@ -146,6 +150,10 @@ For `close`, `reverse` and `refund`, never retry automatically after `UnknownPay
 ## Sandbox acceptance
 
 The default test suite is offline and denies stray HTTP. The opt-in Echo harness is documented in [docs/acceptance-and-sandbox.md](docs/acceptance-and-sandbox.md); payment scenarios require separate authorization and merchant provisioning.
+
+## Release history
+
+See the [changelog](CHANGELOG.md) for versioned changes.
 
 ## License
 
