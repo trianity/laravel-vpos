@@ -1,6 +1,6 @@
 # Prompt 08 — Fix release blockers and prepare the public RC
 
-Work in `trianity/laravel-vpos` after Prompts 01–07. Start from the current implementation branch. The review was pinned to [`48ce91c`](https://github.com/trianity/laravel-vpos/commit/48ce91c7a95cddaa2762369c2e88eb5df48d98ee). Read [the prompt index](README.md), [the acceptance evidence](acceptance-and-sandbox.md), [the hosted-card lifecycle](hosted-card-lifecycle.md), and [the Laravel integration guide](laravel-entry-points.md). Verify each finding against the current code before editing. Use the source snapshots in the index for eAPI contract decisions.
+Work in `trianity/laravel-vpos` after Prompts 01–07. Start from the current implementation branch. The original review used a private development snapshot. The public repository starts with the [imported Prompt 08 snapshot `ed078da`](https://github.com/trianity/laravel-vpos/tree/ed078da314ab997fe726df2872e377776117d492). Read [the prompt index](README.md), [the acceptance evidence](acceptance-and-sandbox.md), [the hosted-card lifecycle](hosted-card-lifecycle.md), and [the Laravel integration guide](laravel-entry-points.md). Verify each finding against the current code before editing. Use the source snapshots in the index for eAPI contract decisions.
 
 Keep the single signed client stack, Laravel 13, PHP 8.4.27 and 8.5 CI coverage, and mandatory verification of signed gateway responses. Keep database and order-state policy in the host application. Use synthetic credentials and deny stray HTTP throughout the default suite.
 

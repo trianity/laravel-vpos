@@ -15,7 +15,7 @@ Run one prompt per Codex session on the same implementation branch, in order. Gi
 
 ## Source snapshots
 
-- Package reviewed at [a37f01d](https://github.com/trianity/laravel-vpos/tree/a37f01d0e31207e6bb4b0f57937add1a11232c68).
+- Public repository baseline: [imported Prompt 08 snapshot `ed078da`](https://github.com/trianity/laravel-vpos/tree/ed078da314ab997fe726df2872e377776117d492). Earlier baseline SHAs in the individual reports refer to the private development history.
 - [Supplied PHP examples and fixtures](https://github.com/trianity/Payment-gateway_HU/tree/253a87c0b45216487285c7f12097aeb31e86047f/examples/eApi%20v1.0/php), commit `253a87c0b45216487285c7f12097aeb31e86047f`. Read `src/apiservice.php`, `src/cryptoservice.php`, `src/mipsconnector.php`, `src/examples.php` and `config/*.json`. Java and .NET examples in the same snapshot provide cross-checks.
 - [Official K&H wiki](https://github.com/khpos/Payment-gateway_HU/wiki), separate Git repository `https://github.com/khpos/Payment-gateway_HU.wiki.git`, reviewed at `f35dab5e6b55f97ffa033e67d85e6db88a355b8f`. Read Basic Methods, API Integration, Request Signing and Response Signature Validation, the payment lifecycle, purchase metadata, each payment family page, and the extension pages. Use the upstream wiki if the supplied fork has no accessible wiki.
 - Use the eAPI v1.0 specification to resolve sample inconsistencies. Cite a page, section or sample file for every material contract decision. Record contradictions and isolate any case that needs merchant-specific documentation or sandbox confirmation. Keep optional capabilities outside the PHP examples, such as payment links, separate in the matrix.
