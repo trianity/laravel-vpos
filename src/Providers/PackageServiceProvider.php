@@ -26,7 +26,7 @@ class PackageServiceProvider extends ServiceProvider
     {
         AboutCommand::add(
             'Payment Gateway for K&H VPOS service',
-            fn () => ['Version' => InstalledVersions::getPrettyVersion('trianity/vpos') ?? 'development']
+            fn () => ['Version' => InstalledVersions::getPrettyVersion('trianity/laravel-vpos') ?? 'development']
         );
 
         $this->loadTranslationsFrom($this->packageBasePath().'/lang', 'vpos');

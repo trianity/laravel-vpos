@@ -41,7 +41,7 @@ The complete integration and recovery flow is documented in the root [README](..
 | `git diff --check` | Passed |
 | Production-only resolution, PHP 8.4 | Candidate plus Laravel 13.40.0 resolved with `--no-dev` |
 | Production-only resolution, PHP 8.5 | Candidate plus Laravel 13.40.0 resolved with `--no-dev` |
-| Clean Laravel consumer | Laravel 13.40.0 discovered `trianity/vpos`; documented `vpos-config` publish command produced config, translations and views |
+| Clean Laravel consumer | Laravel 13.40.0 discovered `trianity/laravel-vpos`; documented `vpos-config` publish command produced config, translations and views |
 
 Commands used:
 

@@ -11,7 +11,7 @@ Laravel 13 integration for the K&H eAPI v1.0 payment gateway. The package signs 
 ## Installation
 
 ```bash
-composer require trianity/vpos
+composer require trianity/laravel-vpos
 php artisan vendor:publish --provider="Trianity\Vpos\Providers\PackageServiceProvider" --tag=vpos-config
 ```
 

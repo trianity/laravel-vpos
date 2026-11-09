@@ -1,6 +1,6 @@
 # Prompt 04 — Complete the hosted card payment lifecycle
 
-Work in `trianity/vpos` after Prompt 03. Use [docs/README.md](README.md), Basic Methods, the payment lifecycle, request signing, and the basic, extended and OneClick-template PHP JSON fixtures.
+Work in `trianity/laravel-vpos` after Prompt 03. Use [docs/README.md](README.md), Basic Methods, the payment lifecycle, request signing, and the basic, extended and OneClick-template PHP JSON fixtures.
 
 1. Implement or correct `POST payment/init`, signed `GET payment/process/{merchantId}/{payId}/{dttm}/{signature}`, `GET payment/status/{merchantId}/{payId}/{dttm}/{signature}`, and `PUT payment/close`, `payment/reverse` and `payment/refund` through the shared stack. Keep the legacy adapter aligned as its operations are migrated. Fix response action handling where it is already needed by the card lifecycle and coordinate concrete 3DS action hydration with Prompt 05.
 2. Test standard init, extended metadata and `payOperation=oneclickPayment` with signed fixtures. Keep an integer amount in hundredths on the wire. Enforce the documented HUF whole-forint restriction, allow the supported EUR/USD precision, reconcile totals with cart line totals, preserve numeric order references as strings and cover optional TTL, language and Boolean `closePayment`. Verify omission and signing order. Record any additional documented variant such as payment by link separately with its support status.

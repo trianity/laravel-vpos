@@ -20,7 +20,7 @@ The final local evidence was collected on 2026-11-09 from Prompt 06 commit `bb81
 
 | Check | PHP 8.4.27 | PHP 8.5.12 |
 | --- | --- | --- |
-| Fresh production-only consumer `composer update --no-dev` | 22 installs; `trianity/vpos dev-main bb818a3`; Illuminate 13.40.0 | 22 installs; `trianity/vpos dev-main bb818a3`; Illuminate 13.40.0 |
+| Fresh production-only consumer `composer update --no-dev` | 22 installs; `trianity/laravel-vpos dev-main bb818a3`; Illuminate 13.40.0 | 22 installs; `trianity/laravel-vpos dev-main bb818a3`; Illuminate 13.40.0 |
 | Locked Pest suite | 85 passed, 189 assertions, 0 failures, 0 skipped | 85 passed, 189 assertions, 0 failures, 0 skipped |
 | Larastan level 5, `src` + `tests` + `sandbox` | No errors | No errors |
 
@@ -73,7 +73,7 @@ The source links point to the pinned upstream snapshots listed in [the parity ma
 
 Fresh production-only consumer resolution must be performed in disposable directories, once with PHP 8.4.27 and once with PHP 8.5. It must require this package through a path/VCS repository and run `composer update --no-dev`; copying this repository's lock file is not a fresh resolution. Record the resolved Laravel and package versions.
 
-This acceptance used `/tmp/vpos-consumer-84` and `/tmp/vpos-consumer-85`. Each project required its exact PHP runtime and `trianity/vpos:dev-main` from the local path repository. Both independently selected Illuminate 13.40.0. There is no runtime restriction unique to either supported PHP version.
+This acceptance used `/tmp/vpos-consumer-84` and `/tmp/vpos-consumer-85`. Each project required its exact PHP runtime and `trianity/laravel-vpos:dev-main` from the local path repository. Both independently selected Illuminate 13.40.0. There is no runtime restriction unique to either supported PHP version.
 
 The development toolchain is checked separately because it is not installed for consumers. Both supported PHP executables must run the locked Pest and Larastan suites. A toolchain-only restriction does not narrow the runtime claim unless fresh `--no-dev` resolution also fails.
 

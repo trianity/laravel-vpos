@@ -1,6 +1,6 @@
 # Prompt 07 — Verify acceptance and prepare sandbox evidence
 
-Work in `trianity/vpos` after Prompts 01–06. Read [docs/README.md](README.md) and review the complete implementation diff against the recorded baseline.
+Work in `trianity/laravel-vpos` after Prompts 01–06. Read [docs/README.md](README.md) and review the complete implementation diff against the recorded baseline.
 
 1. Close every row of `docs/eapi-v1-parity.md` with a source, implementation reference, passing test and evidence status. Use distinct statuses for offline-verified, sandbox-verified, awaiting merchant setup, confirmed exclusion and unresolved gap. A method name or skipped test is insufficient evidence. Re-run the full offline suite with network denied, strict Composer validation, optimized PSR-4 checks and Pint in check mode. Run Larastan with the repo's explicit scope/configuration, or report the missing setup and use a reviewable scoped command. Verify no Spatie Laravel Data references remain in package/runtime test code or dependency metadata. Report residual JSON Mapper dependencies and why they remain.
 2. Exercise fresh dependency resolution for Laravel 13 on PHP 8.4.27 and 8.5, respecting actual dependency constraints. Separately run the test toolchain wherever its constraints permit. Report unsupported combinations precisely, including whether the restriction is in runtime or only the development toolchain. Keep test keys, auth files and captured sensitive data outside tracked files.

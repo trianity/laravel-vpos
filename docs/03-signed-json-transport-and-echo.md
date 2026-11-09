@@ -1,6 +1,6 @@
 # Prompt 03 — Implement shared signed transport and both echo variants
 
-Work in `trianity/vpos` after Prompt 02. Read [docs/README.md](README.md), the parity matrix, and the K&H signing and API integration pages.
+Work in `trianity/laravel-vpos` after Prompt 02. Read [docs/README.md](README.md), the parity matrix, and the K&H signing and API integration pages.
 
 1. Introduce a shared transport/signing implementation for the typed API and legacy adapter, preserving their caller-facing shapes. Replace property-order flattening with operation-specific field order from K&H. Keep request payload and signing input in agreement. Sign decoded path values before percent-encoding each segment once. Cover UTF-8, nested lists, Boolean literals, zeros, optional omission and signature exclusion. Preserve the signature on response objects when verifying.
 2. Validate key loading and OpenSSL results. Use RSA/SHA-256 and strict Base64 decoding. Treat required verification as failed unless `openssl_verify()` returns 1. The current code ignores false from verification and uses confusing opposite interpretations of `verify`. Document compatibility and enforce verification on package payment paths, including the legacy path when migrated. Do not silently disable it through existing config defaults or missing keys. Any unsigned transport error follows its documented error path and can never yield a successful payment result.

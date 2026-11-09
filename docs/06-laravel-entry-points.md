@@ -2,7 +2,7 @@
 
 > Pre-release decision after implementation: no legacy compatibility surface is supported. Requirements below that asked to retain legacy aliases/methods were superseded; abandoned clients, DTOs, crypto wrappers and sandbox-only paths were removed.
 
-Work in `trianity/vpos` after Prompt 05. Use [docs/README.md](README.md) and the completed transport and DTO contracts. Test through Laravel Testbench.
+Work in `trianity/laravel-vpos` after Prompt 05. Use [docs/README.md](README.md) and the completed transport and DTO contracts. Test through Laravel Testbench.
 
 1. Bind the verified client and configuration through `PackageServiceProvider`. Wire the facade and existing controller route to the shared implementation, retaining caller-facing aliases, route names and callable legacy methods where practical. Check the Composer alias points to the actual facade, published config and error views resolve, and credentials are needed only when a payment client is used. Where legacy client methods remain, delegate to the shared implementation rather than maintaining parallel security logic. Preserve or document adapter return-type changes.
 2. Remove demo-only order identity and return URL from the route. Make trusted checkout data an explicit host integration point. Require an order reference and configurable trusted return URL, use server-owned amounts and cart data for real checkout, and keep any demo/donation amount convention explicit and tested. Reconcile config keys for merchant ID, currency and language, including existing environment variable names and conflict handling.

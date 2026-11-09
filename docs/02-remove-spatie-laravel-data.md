@@ -1,6 +1,6 @@
 # Prompt 02 — Replace Spatie DTOs with package-owned PHP objects
 
-Work in `trianity/vpos` after Prompt 01. Read [docs/README.md](README.md) and the baseline inventory. Limit this task to data contracts and dependency removal. Keep the protocol corrections assigned to later prompts.
+Work in `trianity/laravel-vpos` after Prompt 01. Read [docs/README.md](README.md) and the baseline inventory. Limit this task to data contracts and dependency removal. Keep the protocol corrections assigned to later prompts.
 
 1. Replace all `Spatie\LaravelData\Data` inheritance and `Optional` usage with native typed DTOs and explicit hydration/serialization. Include unused-looking public DTOs such as `EuVatData`. Keep existing FQCNs and characterize used constructor signatures, named arguments, `from()`, `all()`, `toArray()` and JSON behavior before changing them. Retain compatibility where evidence supports it and document the boundary of the former Spatie API.
 2. Handle missing values, null, empty strings, false, zero, backed enums and ordered lists deliberately. Test nested `cart`, `customer/account/login`, `order/billing/shipping`, and response extensions. Keep raw DTO export and protocol serialization separate where their requirements differ. Keep constructor, array factory and direct mutation behavior consistent for supported callers.
