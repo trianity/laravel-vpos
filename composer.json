@@ -1,6 +1,6 @@
 {
-    "name": "trianity/vpos",
-    "description": "Payment Gateway for K and H VPOS service",
+    "name": "trianity/laravel-vpos",
+    "description": "Payment Gateway for K and H Bank VPOS service",
     "keywords": [
         "payment", "ecommerce", "gateway", "vpos", "laravel", "k and h", "khVpos"
     ],
