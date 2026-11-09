@@ -1,0 +1,71 @@
+{
+    "name": "trianity/vpos",
+    "description": "Payment Gateway for K and H VPOS service",
+    "keywords": [
+        "payment", "ecommerce", "gateway", "vpos", "laravel", "k and h", "khVpos"
+    ],
+    "homepage": "https://trianity.dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Istvan Holbok",
+            "email": "holbok@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.4.27",
+        "ext-openssl": "*",
+        "illuminate/support": "^13.0",
+        "illuminate/contracts" : "^13.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.10",
+        "larastan/larastan": "^3.0",
+        "orchestra/testbench": "^11.0",
+        "pestphp/pest": "^5.0",
+        "pestphp/pest-plugin-phpstan": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Trianity\\Vpos\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Trianity\\Vpos\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Trianity\\Vpos\\Providers\\PackageServiceProvider"
+            ],
+            "aliases": {
+                "KHVpos": "Trianity\\Vpos\\Facades\\KHVpos"
+            }
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test:sandbox": "vendor/bin/phpunit -c phpunit.sandbox.xml",
+        "phpstan": [
+            "vendor/bin/phpstan analyse -c phpstan.neon.dist"
+        ],
+        "pint": [
+            "vendor/bin/pint"
+        ],
+        "check": [
+            "vendor/bin/pint",
+            "vendor/bin/phpstan analyse -c phpstan.neon.dist",
+            "vendor/bin/pest"
+        ]
+    },
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}
